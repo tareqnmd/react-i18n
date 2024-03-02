@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.p-10 {
+	padding: 10px;
+}
+
+.flex-center-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.gap-4 {
+	gap: 4px;
+}
+
+.border-bottom {
+	border-bottom: 1px solid;
+}
+
+.center-loading {
+	display: grid;
+	place-content: center;
+	min-height: 100vh;
+}

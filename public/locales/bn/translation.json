@@ -1,7 +1,10 @@
 {
-	"main": {
-		"header": "¡Bienvenido/a a la app!",
-		"new_messages_one": "Tienes un mensaje nuevo",
-		"new_messages_other": "Tienes {{count}} mensajes nuevos"
+	"home": {
+		"counter": {
+			"title": "কাউন্টার",
+			"count_value": "মান {{count}}",
+			"add": "যোগ করুন"
+		},
+		"header": "অ্যাপে স্বাগত জানাই!"
 	}
 }

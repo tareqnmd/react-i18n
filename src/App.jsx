@@ -1,30 +1,17 @@
-import { Suspense, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-
-const locales = {
-  en: { title: 'English' },
-  bn: { title: 'Bangla' },
-};
-
+import { Suspense } from 'react';
+import './App.css';
+import Header from './components/Header';
+import Home from './components/Home';
+import Loading from './components/Loading';
 const App = () => {
-  const { t, i18n } = useTranslation();
-  const [messages, setMessages] = useState(0);
-  return <Suspense fallback="...loading">
-    <div>
-      <ul>
-        {Object.keys(locales).map((locale) => (
-          <li key={locale}><button style={{ fontWeight: i18n.resolvedLanguage === locale ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(locale)}>
-            {locales[locale].title}
-          </button></li>
-        ))}
-      </ul>
-      <button onClick={() => setMessages(messages + 1)}>+1 message</button>
-      <h1>{t('main.header')}</h1>
-      <p>
-        {t('main.new_messages', { count: messages })}
-      </p>
-    </div>
-  </Suspense>
+  return (
+    <Suspense fallback={<Loading />}>
+      <Header />
+      <main className='p-10'>
+        <Home />
+      </main>
+    </Suspense>
+  );
 };
 
 export default App;
